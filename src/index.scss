@@ -1,0 +1,48 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap";
+@import "./sass/components/inputField";
+@import "./sass/components/student";
+@import "./sass/pages/homepage";
+@import "./App";
+@import "./sass/queries";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(240, 240, 240);
+}
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 55%;
+  }
+
+  .main-wrapper {
+    width: 90%;
+    margin: 5vh auto;
+  }
+}

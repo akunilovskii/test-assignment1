@@ -1,0 +1,15 @@
+.main-wrapper {
+  background-color: white;
+  margin: 10vh auto;
+  width: 60vw;
+  height: 80vh;
+  overflow-y: scroll;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem 0 gray;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}

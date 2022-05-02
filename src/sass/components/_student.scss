@@ -1,0 +1,109 @@
+.student {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  border-bottom: 1px solid lightgray;
+}
+.image-wrapper {
+  width: 90%;
+  margin-left: 1rem;
+}
+
+.student__name {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.student__image {
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+  max-width: 15rem;
+  border-radius: 100rem;
+  border: 1px solid lightgray;
+}
+
+.details-wrapper {
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.details-wrapper > div:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.details-secondary {
+  padding-left: 1rem;
+
+  & > div:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+}
+
+.student__name {
+  text-transform: uppercase;
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.tags-wrapper {
+  display: flex;
+}
+
+.tag__item {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 1rem 1rem 0 0;
+  background-color: lightgrey;
+  padding: 1.5% 1.5%;
+  border: none;
+  border-radius: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.student__grades {
+  display: flex;
+}
+.grades-container {
+  margin-top: 2rem;
+  width: 8vw;
+  animation: unFold 250ms ease-in-out;
+  &.disabled {
+    display: none;
+  }
+}
+@keyframes unFold {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.icon-wrapper {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  border: none;
+  background-color: white;
+}
+.icon {
+  cursor: pointer;
+  width: 2.5vw;
+  color: gray;
+  stroke-width: 0.4rem;
+
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+.grade__item {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}

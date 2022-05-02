@@ -1,0 +1,20 @@
+@media (max-width: 800px) {
+  .student {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-wrapper {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: 0.5rem;
+  }
+
+  .student__image {
+    width: 20vw;
+  }
+  .image-wrapper,
+  .details-wrapper {
+    margin: auto;
+  }
+}
