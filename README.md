@@ -1,4 +1,4 @@
-# My first test assignment (React, SASS)
+# Test assignment #1 (React, SASS)
 
 Tasks included 
 1. Get an array of list elements from a server
