@@ -8,8 +8,6 @@ import { ReactComponent as MinusIcon } from "../assets/minus-icon.svg";
 function HomePage() {
   const [students, setStudents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  // const [nameSearchText, setNameSearchText] = useState("");
-  // const [tagSearchText, setTagSearchText] = useState("");
   const [arrayToRender, setArrayToRender] = useState([]);
   const [searchInputFields, setSearchInputFields] = useState({
     name: "",
@@ -36,25 +34,11 @@ function HomePage() {
     getStudents();
   }, []);
 
-  // const filterStudentsArrayToRender = useCallback(() => {
-  //   return students.filter((std) => {
-  //     if (nameSearchText && std.name.join("").includes(nameSearchText)) {
-  //       return true;
-  //     }
-  //     if (tagSearchText && std.tags.join("").includes(tagSearchText)) {
-  //       return true;
-  //     }
-  //     if (!nameSearchText && !tagSearchText) {
-  //       return true;
-  //     }
-  //   });
-  // }, [nameSearchText, tagSearchText, students]);
-
   const newFilterStudentsArrayToRender = useCallback(() => {
     return students.filter((std) => {
       let hasAnySearchField = false;
       for (let [key, value] of Object.entries(searchInputFields)) {
-        if (value.length <= 0) {
+        if (!value.length) {
           continue;
         }
         hasAnySearchField = true;
@@ -70,13 +54,6 @@ function HomePage() {
     const data = { ...searchInputFields };
     data[searchType] = value;
     setSearchInputFields(data);
-
-    // if (searchType === "name") {
-    //   setNameSearchText(value);
-    // }
-    // if (searchType === "tags") {
-    //   setTagSearchText(value);
-    // }
   }
 
   const addTagToStudent = useCallback(
